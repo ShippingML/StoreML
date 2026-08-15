@@ -24,7 +24,6 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;}
 
-/* SIDEBAR */
 .sidebar{position:fixed;left:0;top:0;width:224px;height:100vh;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;z-index:100;box-shadow:var(--shadow-sm);}
 .logo{padding:22px 20px 18px;border-bottom:1px solid var(--border);background:linear-gradient(135deg,#1D5FB4 0%,#1A4A8A 100%);}
 .logo-badge{font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.65);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;}
@@ -36,9 +35,9 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
 .nav-item:hover{background:var(--bg3);color:var(--text);}
 .nav-item.active{background:var(--blue-d);color:var(--blue);font-weight:500;border:1px solid var(--blue-b);}
 .nav-icon{width:16px;height:16px;flex-shrink:0;stroke:currentColor;fill:none;stroke-width:1.5;}
-.sidebar-footer{padding:14px 18px;border-top:1px solid var(--border);font-size:11px;color:var(--text3);line-height:1.8;background:var(--bg3);}
+.sidebar-footer{padding:16px 18px;border-top:1px solid var(--border);font-size:11px;color:var(--text3);line-height:2;background:var(--bg3);}
+.author{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;color:var(--blue);background:var(--blue-d);border:1px solid var(--blue-b);border-radius:8px;padding:5px 12px;letter-spacing:0.3px;}
 
-/* MAIN */
 .main{margin-left:224px;padding:28px 32px;min-height:100vh;}
 .page{display:none;}
 .page.active{display:block;animation:fi .2s ease;}
@@ -50,7 +49,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
 .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
-/* KPI */
 .kpi-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-bottom:22px;}
 .kpi{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 18px 14px;position:relative;overflow:visible;box-shadow:var(--shadow-sm);}
 .kpi-accent{position:absolute;top:0;left:0;right:0;height:3px;border-radius:12px 12px 0 0;}
@@ -62,25 +60,20 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
 .kpi-val.a{color:var(--amber);}
 .kpi-sub{font-size:11px;color:var(--text3);margin-top:5px;}
 
-/* CARD */
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:14px;box-shadow:var(--shadow-sm);position:relative;overflow:visible;}
 .card-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;gap:8px;}
 .card-title-left{display:flex;align-items:center;gap:8px;flex:1;}
 .tag{font-size:10px;color:var(--text3);background:var(--bg3);padding:3px 9px;border-radius:5px;border:1px solid var(--border2);font-family:var(--mono);}
 .g2{display:grid;grid-template-columns:3fr 2fr;gap:14px;margin-bottom:14px;}
 
-/* SAVE BUTTON on each widget */
 .btn-jpg{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;border:1px solid var(--blue-b);background:var(--blue-d);color:var(--blue);font-size:11px;font-weight:600;cursor:pointer;font-family:var(--sans);transition:all .15s;flex-shrink:0;white-space:nowrap;}
 .btn-jpg:hover{background:var(--blue);color:#fff;border-color:var(--blue);}
 .btn-jpg svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.5;flex-shrink:0;}
-
-/* KPI save button — top-right corner */
 .kpi-save{position:absolute;top:8px;right:8px;display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:5px;border:1px solid var(--blue-b);background:var(--blue-d);color:var(--blue);font-size:10px;font-weight:600;cursor:pointer;font-family:var(--sans);transition:all .15s;opacity:0;}
 .kpi:hover .kpi-save{opacity:1;}
 .kpi-save:hover{background:var(--blue);color:#fff;}
 .kpi-save svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.5;}
 
-/* GRIDS */
 .leg{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:10px;}
 .li{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);}
 .lsq{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
@@ -91,14 +84,12 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
 .bfill{height:100%;border-radius:5px;transition:width .5s ease;}
 .bamt{font-family:var(--mono);font-size:11px;color:var(--text2);width:96px;text-align:right;flex-shrink:0;}
 
-/* CHIPS */
 .chip{display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:600;border:1px solid transparent;}
 .cup{background:var(--green-d);color:var(--green);border-color:var(--green-b);}
 .cdown{background:var(--red-d);color:var(--red);border-color:var(--red-b);}
 .cflat{background:var(--bg3);color:var(--gray);border-color:var(--border2);}
 .cnone{background:var(--blue-d);color:var(--blue);border-color:var(--blue-b);}
 
-/* TABLE */
 .tbl-wrap{overflow-x:auto;overflow-y:auto;max-height:520px;}
 table{width:100%;border-collapse:collapse;font-size:12px;}
 th{position:sticky;top:0;background:var(--bg3);color:var(--text3);font-weight:600;font-size:11px;text-align:right;padding:10px 11px;border-bottom:1.5px solid var(--border2);z-index:5;}
@@ -114,7 +105,6 @@ td.new-col{color:var(--amber)!important;background:#FFFBF5!important;font-weight
 .pos{color:var(--green);font-weight:600;}
 .zero{color:var(--text3);}
 
-/* INSIGHT */
 .ins{border-left:4px solid;padding:12px 16px;border-radius:0 10px 10px 0;margin-bottom:10px;position:relative;}
 .ins.r{border-color:var(--red);background:var(--red-d);}
 .ins.g{border-color:var(--green);background:var(--green-d);}
@@ -128,12 +118,10 @@ td.new-col{color:var(--amber)!important;background:#FFFBF5!important;font-weight
 .ins.a .ins-t{color:var(--amber);}
 .ins.b .ins-t{color:var(--blue);}
 
-/* STAT */
 .srow{display:flex;justify-content:space-between;align-items:center;padding:9px 14px;background:var(--bg3);border-radius:8px;margin-bottom:7px;border:1px solid var(--border);}
 .sk{font-size:12px;color:var(--text2);}
 .sv{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--text);}
 
-/* TOAST */
 .toast{position:fixed;bottom:24px;right:24px;z-index:999;background:#1C2340;color:#fff;padding:10px 18px;border-radius:10px;font-size:12px;box-shadow:0 4px 16px rgba(0,0,0,0.2);opacity:0;transform:translateY(10px);transition:all .3s;pointer-events:none;}
 .toast.show{opacity:1;transform:translateY(0);}
 
@@ -181,71 +169,75 @@ td.new-col{color:var(--amber)!important;background:#FFFBF5!important;font-weight
       <span>ข้อเสนอแนะ</span>
     </button>
   </nav>
-  <div class="sidebar-footer">ข้อมูล SAP<br>ธ.ค. 67 – ก.ค. 69<br>14 แผนก · 8 รอบ<br><br><strong style="color:var(--blue);font-size:12px;">จัดทำโดย Thana Store</strong></div>
+  <div class="sidebar-footer">
+    ข้อมูล SAP<br>
+    ธ.ค. 67 – ส.ค. 69<br>
+    14 แผนก · 9 รอบ<br>
+    <span class="author">จัดทำโดย Thana Store</span>
+  </div>
 </div>
 
 <main class="main">
 
-<!-- ======= OVERVIEW ======= -->
+<!-- OVERVIEW -->
 <div class="page active" id="page-overview">
   <div class="page-header">
     <div>
       <div class="page-title">ภาพรวมสต๊อคอะไหล่รายแผนก ML</div>
-      <div class="page-subtitle">Stock อะไหล่คลังพัสดุมิตรลาว · ข้อมูล SAP ล่าสุด ณ 14 ก.ค. 2569 · <span style="color:var(--blue);font-weight:500;">ผู้จัดทำโดย Thana</span></div>
+      <div class="page-subtitle">Stock อะไหล่คลังพัสดุมิตรลาว · ข้อมูล SAP ล่าสุด ณ 14 ส.ค. 2569 · <span style="color:var(--blue);font-weight:600;">จัดทำโดย Thana Store</span></div>
     </div>
-    <span class="badge"><span class="dot"></span>อัปเดต 14 ก.ค. 2569</span>
+    <span class="badge"><span class="dot"></span>อัปเดต 14 ส.ค. 2569</span>
   </div>
 
-  <!-- KPI GRID — each kpi has its own save button -->
-  <div class="kpi-grid" id="kpiGrid">
+  <div class="kpi-grid">
     <div class="kpi" id="kpi0">
       <div class="kpi-accent" style="background:#1D5FB4;"></div>
       <button class="kpi-save" onclick="saveEl('kpi0','KPI_มูลค่ารวม')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button>
       <div class="kpi-lbl">มูลค่าสต๊อครวม ณ ปัจจุบัน</div>
-      <div class="kpi-val b">4,570,400</div>
-      <div class="kpi-sub">บาท · ณ 14 ก.ค. 2569</div>
+      <div class="kpi-val b">4,739,103</div>
+      <div class="kpi-sub">บาท · ณ 14 ส.ค. 2569</div>
     </div>
     <div class="kpi" id="kpi1">
-      <div class="kpi-accent" style="background:#C0392B;"></div>
+      <div class="kpi-accent" style="background:#1A8C5B;"></div>
       <button class="kpi-save" onclick="saveEl('kpi1','KPI_ผลต่าง')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button>
-      <div class="kpi-lbl">ผลต่าง มิ.ย. → ก.ค. 69</div>
-      <div class="kpi-val r">-233,185</div>
-      <div class="kpi-sub">บาท · สต๊อครวมลดลง</div>
+      <div class="kpi-lbl">ผลต่าง ก.ค. → ส.ค. 69</div>
+      <div class="kpi-val g">+168,703</div>
+      <div class="kpi-sub">บาท · สต๊อครวมเพิ่มขึ้น</div>
     </div>
     <div class="kpi" id="kpi2">
       <div class="kpi-accent" style="background:#B06010;"></div>
       <button class="kpi-save" onclick="saveEl('kpi2','KPI_แผนกสูงสุด')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button>
       <div class="kpi-lbl">แผนกสต๊อคสูงสุด</div>
       <div class="kpi-val a">ลูกหีบ</div>
-      <div class="kpi-sub">937,781 บาท (20.5%)</div>
+      <div class="kpi-sub">937,781 บาท (19.8%)</div>
     </div>
     <div class="kpi" id="kpi3">
       <div class="kpi-accent" style="background:#C0392B;"></div>
       <button class="kpi-save" onclick="saveEl('kpi3','KPI_ลดลงสะสม')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button>
       <div class="kpi-lbl">ลดลงจากต้นงวด ธ.ค. 67</div>
-      <div class="kpi-val r">-71.7%</div>
+      <div class="kpi-val r">-70.7%</div>
       <div class="kpi-sub">จาก 16,155,653 บาท</div>
     </div>
     <div class="kpi" id="kpi4">
-      <div class="kpi-accent" style="background:#C0392B;"></div>
-      <button class="kpi-save" onclick="saveEl('kpi4','KPI_ลดมากสุด')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button>
-      <div class="kpi-lbl">แผนกลดลงมากสุด (ก.ค.)</div>
-      <div class="kpi-val r">เครื่องมือเกษตร</div>
-      <div class="kpi-sub">-223,127 บาท (น้ำมัน)</div>
+      <div class="kpi-accent" style="background:#1A8C5B;"></div>
+      <button class="kpi-save" onclick="saveEl('kpi4','KPI_เพิ่มมากสุด')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button>
+      <div class="kpi-lbl">แผนกเพิ่มมากสุด (ส.ค.)</div>
+      <div class="kpi-val g">เก็บเกี่ยว</div>
+      <div class="kpi-sub">+146,490 บาท</div>
     </div>
   </div>
 
   <div class="g2">
     <div class="card" id="cardTrendOv">
       <div class="card-title">
-        <div class="card-title-left">แนวโน้มมูลค่าสต๊อครวม 8 รอบ<span class="tag">TREND LINE</span></div>
+        <div class="card-title-left">แนวโน้มมูลค่าสต๊อครวม 9 รอบ<span class="tag">TREND LINE</span></div>
         <button class="btn-jpg" onclick="saveEl('cardTrendOv','กราฟแนวโน้มรวม')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>บันทึก JPG</button>
       </div>
       <div style="position:relative;height:230px;"><canvas id="trendOv"></canvas></div>
     </div>
     <div class="card" id="cardPieOv">
       <div class="card-title">
-        <div class="card-title-left">สัดส่วนสต๊อค ณ 14 ก.ค. 69<span class="tag">DONUT</span></div>
+        <div class="card-title-left">สัดส่วนสต๊อค ณ 14 ส.ค. 69<span class="tag">DONUT</span></div>
         <button class="btn-jpg" onclick="saveEl('cardPieOv','กราฟสัดส่วนสต๊อค')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>บันทึก JPG</button>
       </div>
       <div style="position:relative;height:190px;"><canvas id="pieOv"></canvas></div>
@@ -255,18 +247,18 @@ td.new-col{color:var(--amber)!important;background:#FFFBF5!important;font-weight
 
   <div class="card" id="cardStatus">
     <div class="card-title">
-      <div class="card-title-left">สถานะแต่ละแผนก ณ ก.ค. 2569<span class="tag">STATUS CARDS</span></div>
+      <div class="card-title-left">สถานะแต่ละแผนก ณ ส.ค. 2569<span class="tag">STATUS CARDS</span></div>
       <button class="btn-jpg" onclick="saveEl('cardStatus','การ์ดสถานะแผนก')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>บันทึก JPG</button>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;" id="statusCards"></div>
   </div>
 </div>
 
-<!-- ======= TREND ======= -->
+<!-- TREND -->
 <div class="page" id="page-trend">
   <div class="page-header">
     <div><div class="page-title">แนวโน้มสต๊อครายช่วงเวลา</div>
-    <div class="page-subtitle">เปรียบเทียบ 8 รอบ ธ.ค. 2567 – ก.ค. 2569</div></div>
+    <div class="page-subtitle">เปรียบเทียบ 9 รอบ ธ.ค. 2567 – ส.ค. 2569</div></div>
   </div>
   <div class="card" id="cardTrendBar">
     <div class="card-title">
@@ -285,11 +277,11 @@ td.new-col{color:var(--amber)!important;background:#FFFBF5!important;font-weight
   </div>
 </div>
 
-<!-- ======= DEPT ======= -->
+<!-- DEPT -->
 <div class="page" id="page-dept">
   <div class="page-header">
     <div><div class="page-title">เปรียบเทียบสต๊อครายแผนก</div>
-    <div class="page-subtitle">มูลค่าสต๊อคอะไหล่ ณ 14 ก.ค. 2569</div></div>
+    <div class="page-subtitle">มูลค่าสต๊อคอะไหล่ ณ 14 ส.ค. 2569</div></div>
   </div>
   <div class="card" id="cardHbar">
     <div class="card-title">
@@ -300,18 +292,18 @@ td.new-col{color:var(--amber)!important;background:#FFFBF5!important;font-weight
   </div>
   <div class="card" id="cardChange">
     <div class="card-title">
-      <div class="card-title-left">ผลต่างมูลค่าสต๊อค มิ.ย. → ก.ค. 2569<span class="tag">CHANGE</span></div>
+      <div class="card-title-left">ผลต่างมูลค่าสต๊อค ก.ค. → ส.ค. 2569<span class="tag">CHANGE</span></div>
       <button class="btn-jpg" onclick="saveEl('cardChange','กราฟผลต่างสต๊อค')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>บันทึก JPG</button>
     </div>
     <div id="changeBars" class="bar-list" style="padding:6px 0;"></div>
   </div>
 </div>
 
-<!-- ======= TABLE ======= -->
+<!-- TABLE -->
 <div class="page" id="page-table">
   <div class="page-header">
     <div><div class="page-title">ตารางข้อมูลสต๊อคครบถ้วน</div>
-    <div class="page-subtitle">มูลค่าสต๊อคอะไหล่รายแผนก 8 รอบ (หน่วย: บาท) · <span style="color:var(--amber);font-weight:600;">★ คอลัมน์สีทอง = งวดล่าสุด ก.ค. 2569</span></div></div>
+    <div class="page-subtitle">มูลค่าสต๊อคอะไหล่รายแผนก 9 รอบ (หน่วย: บาท) · <span style="color:var(--amber);font-weight:600;">★ คอลัมน์สีทอง = งวดล่าสุด ส.ค. 2569</span></div></div>
   </div>
   <div class="card" id="cardTable">
     <div class="card-title">
@@ -322,11 +314,9 @@ td.new-col{color:var(--amber)!important;background:#FFFBF5!important;font-weight
       <table>
         <thead><tr>
           <th>#</th><th>แผนก</th><th>สถานะ</th>
-          <th>ธ.ค. 67</th><th>ม.ค. 69</th><th>ก.พ. 69</th>
-          <th>มี.ค. 69</th><th>เม.ย. 69</th><th>พ.ค. 69</th>
-          <th>มิ.ย. 69</th>
-          <th class="new-col">★ ก.ค. 69</th>
-          <th>ผลต่าง</th>
+          <th>ธ.ค. 67</th><th>ม.ค. 69</th><th>ก.พ. 69</th><th>มี.ค. 69</th>
+          <th>เม.ย. 69</th><th>พ.ค. 69</th><th>มิ.ย. 69</th><th>ก.ค. 69</th>
+          <th class="new-col">★ ส.ค. 69</th><th>ผลต่าง</th>
         </tr></thead>
         <tbody id="tblBody"></tbody>
       </table>
@@ -334,87 +324,83 @@ td.new-col{color:var(--amber)!important;background:#FFFBF5!important;font-weight
   </div>
 </div>
 
-<!-- ======= INSIGHT ======= -->
+<!-- INSIGHT -->
 <div class="page" id="page-insight">
   <div class="page-header">
     <div><div class="page-title">ข้อสังเกตและข้อเสนอแนะ</div>
-    <div class="page-subtitle">วิเคราะห์โดยผู้เชี่ยวชาญด้านพัสดุและคลังสินค้า · อัปเดต ก.ค. 2569</div></div>
+    <div class="page-subtitle">วิเคราะห์โดยผู้เชี่ยวชาญด้านพัสดุและคลังสินค้า · อัปเดต ส.ค. 2569</div></div>
   </div>
 
-  <div class="ins r" id="ins0">
-    <div class="ins-header"><div class="ins-t">⚠️ สต๊อครวมลดลง -233,185 บาท จากงวดก่อน</div><button class="btn-jpg" onclick="saveEl('ins0','ข้อสังเกต1')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button></div>
-    <div class="ins-b">มูลค่าสต๊อครวมลดลงจาก 4,803,586 เป็น 4,570,400 บาท สาเหตุหลักมาจากเครื่องมือเกษตร (น้ำมัน) ที่ลดลงอย่างรวดเร็ว และไฟฟ้าผลิตที่ลดลงต่อเนื่อง</div>
+  <div class="ins g" id="ins0">
+    <div class="ins-header"><div class="ins-t">✅ สต๊อครวมพลิกกลับมาเพิ่มขึ้น +168,703 บาท</div><button class="btn-jpg" onclick="saveEl('ins0','ข้อสังเกต1')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button></div>
+    <div class="ins-b">มูลค่าสต๊อครวมเพิ่มขึ้นจาก 4,570,400 เป็น 4,739,103 บาท หลังจากลดลงในงวดก่อน สัญญาณบวกจากการรับอะไหล่เพิ่มในหลายแผนก</div>
   </div>
-  <div class="ins r" id="ins1">
-    <div class="ins-header"><div class="ins-t">⚠️ เครื่องมือเกษตร น้ำมัน (N2V) — ลดลงหนักสุด -223,127 บาท</div><button class="btn-jpg" onclick="saveEl('ins1','ข้อสังเกต2')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button></div>
-    <div class="ins-b">มูลค่าสต๊อคลดลงจาก 223,681 เหลือเพียง 555 บาท (ลด 99.8%) ในงวดเดียว ต้องตรวจสอบด่วนว่ามีการเบิกน้ำมันจำนวนมากหรือมีปัญหาข้อมูล SAP</div>
+  <div class="ins g" id="ins1">
+    <div class="ins-header"><div class="ins-t">✅ เก็บเกี่ยว (N2P) — เพิ่มขึ้นมากสุด +146,490 บาท</div><button class="btn-jpg" onclick="saveEl('ins1','ข้อสังเกต2')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button></div>
+    <div class="ins-b">มูลค่าสต๊อคเพิ่มจาก 435,150 เป็น 581,640 บาท (เพิ่ม 33.7%) บ่งชี้การเตรียมพร้อมอะไหล่ก่อนฤดูเก็บเกี่ยวอ้อย ควรรักษาระดับนี้ไว้</div>
   </div>
-  <div class="ins r" id="ins2">
-    <div class="ins-header"><div class="ins-t">⚠️ ไฟฟ้าผลิต (N2U) — ลดลงต่อเนื่อง -18,585 บาท</div><button class="btn-jpg" onclick="saveEl('ins2','ข้อสังเกต3')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button></div>
-    <div class="ins-b">มูลค่าสต๊อคลดลงจาก 147,593 เหลือ 129,008 บาท ควรตรวจสอบรายการอะไหล่ที่ถูกเบิกออกและวางแผนเติมสต๊อค</div>
+  <div class="ins g" id="ins2">
+    <div class="ins-header"><div class="ins-t">✅ เครื่องมือเกษตร น้ำมัน (N2V) — ฟื้นตัว +27,209 บาท</div><button class="btn-jpg" onclick="saveEl('ins2','ข้อสังเกต3')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button></div>
+    <div class="ins-b">มูลค่าสต๊อคฟื้นตัวจาก 555 เป็น 27,764 บาท หลังจากลดลงเกือบหมดในงวดก่อน ควรติดตามการเติมสต๊อคน้ำมันให้เพียงพอต่อความต้องการ</div>
   </div>
-  <div class="ins g" id="ins3">
-    <div class="ins-header"><div class="ins-t">✅ เก็บเกี่ยว (N2P) — เพิ่มขึ้น +8,110 บาท</div><button class="btn-jpg" onclick="saveEl('ins3','ข้อสังเกต4')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button></div>
-    <div class="ins-b">มูลค่าสต๊อคเพิ่มจาก 427,040 เป็น 435,150 บาท มีการรับอะไหล่เพิ่มเติม บ่งชี้การเตรียมพร้อมสำหรับฤดูเก็บเกี่ยว</div>
+  <div class="ins r" id="ins3">
+    <div class="ins-header"><div class="ins-t">⚠️ เครื่องมือเกษตร (N2V) — ลดลง -4,996 บาท</div><button class="btn-jpg" onclick="saveEl('ins3','ข้อสังเกต4')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button></div>
+    <div class="ins-b">มูลค่าสต๊อคลดลงจาก 14,627 เหลือ 9,631 บาท กลับสู่ระดับเดิม ควรตรวจสอบว่าอะไหล่ที่เบิกออกไปนำไปใช้งานถูกต้องหรือไม่</div>
   </div>
-  <div class="ins g" id="ins4">
-    <div class="ins-header"><div class="ins-t">✅ เครื่องมือเกษตร (N2V) — เพิ่มขึ้น +4,996 บาท</div><button class="btn-jpg" onclick="saveEl('ins4','ข้อสังเกต5')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button></div>
-    <div class="ins-b">มูลค่าสต๊อคเพิ่มจาก 9,631 เป็น 14,627 บาท สัญญาณที่ดีในการเติมสต๊อคอะไหล่ทั่วไป</div>
+  <div class="ins a" id="ins4">
+    <div class="ins-header"><div class="ins-t">⚡ ลูกหีบ (N2Q) — ยังสูงสุด ไม่มีการเคลื่อนไหว 4 งวดติด</div><button class="btn-jpg" onclick="saveEl('ins4','ข้อสังเกต5')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button></div>
+    <div class="ins-b">มูลค่าสต๊อคคงเดิมที่ 937,781 บาท ติดต่อกัน 4 งวด (มิ.ย.–ส.ค.) ควรตรวจสอบสภาพอะไหล่และประเมินความต้องการใช้งานก่อนฤดูหีบอ้อย</div>
   </div>
-  <div class="ins a" id="ins5">
-    <div class="ins-header"><div class="ins-t">⚡ ลูกหีบ (N2Q) — ยังสูงสุด ไม่มีการเคลื่อนไหว</div><button class="btn-jpg" onclick="saveEl('ins5','ข้อสังเกต6')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button></div>
-    <div class="ins-b">มูลค่าสต๊อคคงเดิมที่ 937,781 บาท ต่อเนื่อง 3 งวด ควรประเมินว่าอะไหล่เหล่านี้ยังพร้อมใช้งานและเพียงพอสำหรับฤดูหีบอ้อยหน้าหรือไม่</div>
-  </div>
-  <div class="ins b" id="ins6">
-    <div class="ins-header"><div class="ins-t">ℹ️ 5 แผนกไม่มีการเคลื่อนไหวต่อเนื่อง</div><button class="btn-jpg" onclick="saveEl('ins6','ข้อสังเกต7')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button></div>
-    <div class="ins-b">ชลประทาน, บำรุงเครื่องกล, ห้องบรรจุ, ลูกหีบ และหม้อปั่น ไม่มีการเปลี่ยนแปลงในงวดนี้ ควรตรวจสอบสภาพอะไหล่และความต้องการใช้งานจริง</div>
+  <div class="ins b" id="ins5">
+    <div class="ins-header"><div class="ins-t">ℹ️ 7 แผนกไม่มีการเคลื่อนไหวในงวดนี้</div><button class="btn-jpg" onclick="saveEl('ins5','ข้อสังเกต6')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>JPG</button></div>
+    <div class="ins-b">ชลประทาน, บำรุงเครื่องกล, ห้องบรรจุ, ไฟฟ้าผลิต, ลูกหีบ, เครื่องมือควบคุม, หม้อเคี่ยว และหม้อปั่น ไม่มีการเปลี่ยนแปลง ควรตรวจสอบว่าสต๊อคยังเพียงพอและอยู่ในสภาพพร้อมใช้</div>
   </div>
 
   <div class="card" id="cardSummary">
     <div class="card-title">
-      <div class="card-title-left">สรุปตัวเลขสำคัญ งวด ก.ค. 2569<span class="tag">SUMMARY</span></div>
+      <div class="card-title-left">สรุปตัวเลขสำคัญ งวด ส.ค. 2569<span class="tag">SUMMARY</span></div>
       <button class="btn-jpg" onclick="saveEl('cardSummary','ตารางสรุปตัวเลข')"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>บันทึก JPG</button>
     </div>
-    <div class="srow"><span class="sk">มูลค่าสต๊อครวม ณ 14 ก.ค. 2569</span><span class="sv" style="color:var(--blue);">4,570,400 บาท</span></div>
-    <div class="srow"><span class="sk">ผลต่างจากงวดก่อน (มิ.ย.)</span><span class="sv neg">-233,185 บาท</span></div>
-    <div class="srow"><span class="sk">แผนกสต๊อคเพิ่มขึ้น</span><span class="sv pos">2 แผนก (เก็บเกี่ยว, เครื่องมือเกษตร)</span></div>
-    <div class="srow"><span class="sk">แผนกสต๊อคลดลง</span><span class="sv neg">3 แผนก (เครื่องมือเกษตรน้ำมัน, ไฟฟ้าผลิต, เครื่องมือควบคุม)</span></div>
-    <div class="srow"><span class="sk">แผนกสต๊อคคงเดิม</span><span class="sv" style="color:var(--gray);">5 แผนก</span></div>
-    <div class="srow"><span class="sk">แผนกที่ไม่มีสต๊อค</span><span class="sv" style="color:var(--text3);">3 แผนก</span></div>
-    <div class="srow"><span class="sk">ลดลงสะสมจากต้นงวด ธ.ค. 67</span><span class="sv neg">-11,585,253 บาท (-71.7%)</span></div>
+    <div class="srow"><span class="sk">มูลค่าสต๊อครวม ณ 14 ส.ค. 2569</span><span class="sv" style="color:var(--blue);">4,739,103 บาท</span></div>
+    <div class="srow"><span class="sk">ผลต่างจากงวดก่อน (ก.ค.)</span><span class="sv pos">+168,703 บาท</span></div>
+    <div class="srow"><span class="sk">แผนกสต๊อคเพิ่มขึ้น</span><span class="sv pos">2 แผนก (เก็บเกี่ยว +146,490, เครื่องมือเกษตรน้ำมัน +27,209)</span></div>
+    <div class="srow"><span class="sk">แผนกสต๊อคลดลง</span><span class="sv neg">1 แผนก (เครื่องมือเกษตร -4,996)</span></div>
+    <div class="srow"><span class="sk">แผนกสต๊อคคงเดิม</span><span class="sv" style="color:var(--gray);">7 แผนก</span></div>
+    <div class="srow"><span class="sk">แผนกที่ไม่มีสต๊อค</span><span class="sv" style="color:var(--text3);">3 แผนก (ซ่อมบำรุงไฟฟ้า, หม้อต้ม, รถตัดอ้อย)</span></div>
+    <div class="srow"><span class="sk">ลดลงสะสมจากต้นงวด ธ.ค. 67</span><span class="sv neg">-11,416,550 บาท (-70.7%)</span></div>
+    <div class="srow"><span class="sk">จัดทำโดย</span><span class="sv" style="color:var(--blue);">Thana Store</span></div>
   </div>
 </div>
 
 </main>
-
 <div class="toast" id="toast"></div>
 
 <script>
-// ---- DATA ----
 const D=[
-  {n:1,name:'เก็บเกี่ยว',loc:'N2P',v:[2085756,24332,313613,6396,255035,427040,427040,435150],diff:8110,st:'up'},
-  {n:2,name:'เครื่องมือเกษตร (น้ำมัน)',loc:'N2V',v:[2677929,159819,403295,211263,217837,128919,223681,555],diff:-223127,st:'down'},
-  {n:3,name:'เครื่องมือเกษตร',loc:'N2V',v:[1540761,13111,13111,9631,9631,9631,9631,14627],diff:4996,st:'up'},
-  {n:4,name:'ชลประทาน',loc:'0900',v:[599634,400939,400939,400939,548236,546172,546172,546172],diff:0,st:'flat'},
-  {n:5,name:'บำรุงเครื่องกล',loc:'0800',v:[1391449,942699,942699,890952,890952,890952,890952,890952],diff:0,st:'flat'},
-  {n:6,name:'ห้องบรรจุ',loc:'1400',v:[18957,744,744,744,744,744,744,744],diff:0,st:'flat'},
-  {n:7,name:'ไฟฟ้าผลิต',loc:'N2U',v:[268766,147593,147593,147593,147593,147593,147593,129008],diff:-18585,st:'down'},
-  {n:8,name:'ลูกหีบ',loc:'N2Q',v:[4096682,834228,1915758,1340187,1335111,937781,937781,937781],diff:0,st:'flat'},
-  {n:9,name:'เครื่องมือควบคุม',loc:'1100',v:[18957,145828,154287,154287,154287,156482,156482,151902],diff:-4580,st:'down'},
-  {n:10,name:'หม้อเคี่ยว',loc:'N2S',v:[1884662,597665,553960,541775,647699,616118,616118,616118],diff:0,st:'flat'},
-  {n:11,name:'หม้อปั่น',loc:'N2T',v:[1572099,948881,1035785,870392,870392,847392,847392,847392],diff:0,st:'flat'},
-  {n:12,name:'ซ่อมบำรุงไฟฟ้า',loc:'N2J',v:[0,0,0,0,0,0,0,0],diff:0,st:'none'},
-  {n:13,name:'หม้อต้ม',loc:'N2R',v:[0,0,0,0,0,0,0,0],diff:0,st:'none'},
-  {n:14,name:'งานรถตัดอ้อย (น้ำมัน)',loc:'N27',v:[0,1800931,1277787,2199205,3285930,0,0,0],diff:0,st:'none'},
+  {n:1,name:'เก็บเกี่ยว',loc:'N2P',v:[2085756,24332,313613,6396,255035,427040,427040,435150,581640],diff:146490,st:'up'},
+  {n:2,name:'เครื่องมือเกษตร (น้ำมัน)',loc:'N2V',v:[2677929,159819,403295,211263,217837,128919,223681,555,27764],diff:27209,st:'up'},
+  {n:3,name:'เครื่องมือเกษตร',loc:'N2V',v:[1540761,13111,13111,9631,9631,9631,9631,14627,9631],diff:-4996,st:'down'},
+  {n:4,name:'ชลประทาน',loc:'0900',v:[599634,400939,400939,400939,548236,546172,546172,546172,546172],diff:0,st:'flat'},
+  {n:5,name:'บำรุงเครื่องกล',loc:'0800',v:[1391449,942699,942699,890952,890952,890952,890952,890952,890952],diff:0,st:'flat'},
+  {n:6,name:'ห้องบรรจุ',loc:'1400',v:[18957,744,744,744,744,744,744,744,744],diff:0,st:'flat'},
+  {n:7,name:'ไฟฟ้าผลิต',loc:'N2U',v:[268766,147593,147593,147593,147593,147593,147593,129008,129008],diff:0,st:'flat'},
+  {n:8,name:'ลูกหีบ',loc:'N2Q',v:[4096682,834228,1915758,1340187,1335111,937781,937781,937781,937781],diff:0,st:'flat'},
+  {n:9,name:'เครื่องมือควบคุม',loc:'1100',v:[18957,145828,154287,154287,154287,156482,156482,151902,151902],diff:0,st:'flat'},
+  {n:10,name:'หม้อเคี่ยว',loc:'N2S',v:[1884662,597665,553960,541775,647699,616118,616118,616118,616118],diff:0,st:'flat'},
+  {n:11,name:'หม้อปั่น',loc:'N2T',v:[1572099,948881,1035785,870392,870392,847392,847392,847392,847392],diff:0,st:'flat'},
+  {n:12,name:'ซ่อมบำรุงไฟฟ้า',loc:'N2J',v:[0,0,0,0,0,0,0,0,0],diff:0,st:'none'},
+  {n:13,name:'หม้อต้ม',loc:'N2R',v:[0,0,0,0,0,0,0,0,0],diff:0,st:'none'},
+  {n:14,name:'งานรถตัดอ้อย (น้ำมัน)',loc:'N27',v:[0,1800931,1277787,2199205,3285930,0,0,0,0],diff:0,st:'none'},
 ];
-const PER=['ธ.ค. 67','ม.ค. 69','ก.พ. 69','มี.ค. 69','เม.ย. 69','พ.ค. 69','มิ.ย. 69','ก.ค. 69'];
-const TOT=[16155653,6016770,7159571,6773364,8363446,4708823,4803586,4570400];
+const PER=['ธ.ค. 67','ม.ค. 69','ก.พ. 69','มี.ค. 69','เม.ย. 69','พ.ค. 69','มิ.ย. 69','ก.ค. 69','ส.ค. 69'];
+const TOT=[16155653,6016770,7159571,6773364,8363446,4708823,4803586,4570400,4739103];
 const PC=['#1D5FB4','#1A8C5B','#C0392B','#B06010','#6B3FA0','#0B7A60','#A52862','#5A6678'];
 const BC={up:'#1A8C5B',down:'#C0392B',flat:'#8899BB',none:'#1D5FB4'};
 const SL={up:'เพิ่มขึ้น',down:'ลดลง',flat:'คงเดิม',none:'ไม่มี Stock'};
 const SC={up:'cup',down:'cdown',flat:'cflat',none:'cnone'};
 const fmt=v=>v===0?'—':v.toLocaleString('th-TH');
 const fmtd=v=>v>0?'+'+v.toLocaleString('th-TH'):v<0?v.toLocaleString('th-TH'):'—';
+const LAST=8; // index of latest period
 
 function go(p,b){
   document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
@@ -423,45 +409,36 @@ function go(p,b){
   if(b)b.classList.add('active');
 }
 
-// ---- SAVE SINGLE ELEMENT AS JPG ----
-async function saveEl(id, name){
-  const el = document.getElementById(id);
-  if(!el){ showToast('ไม่พบ element'); return; }
+async function saveEl(id,name){
+  const el=document.getElementById(id);
+  if(!el){showToast('ไม่พบ element');return;}
   showToast('⏳ กำลังบันทึก "'+name+'"...');
   await new Promise(r=>setTimeout(r,80));
   try{
-    const canvas = await html2canvas(el,{
-      scale:2, useCORS:true, backgroundColor:'#ffffff',
-      logging:false,
-      onclone: doc => {
-        // hide all save buttons in the clone so they don't appear in the image
-        doc.querySelectorAll('.btn-jpg,.kpi-save').forEach(b=>b.style.display='none');
-      }
-    });
-    const link = document.createElement('a');
-    link.download = 'ML_Stock_'+name+'_ก.ค.69.jpg';
-    link.href = canvas.toDataURL('image/jpeg',0.96);
-    link.click();
+    const canvas=await html2canvas(el,{scale:2,useCORS:true,backgroundColor:'#ffffff',logging:false,
+      onclone:doc=>doc.querySelectorAll('.btn-jpg,.kpi-save').forEach(b=>b.style.display='none')});
+    const a=document.createElement('a');
+    a.download='ML_Stock_'+name+'_ส.ค.69.jpg';
+    a.href=canvas.toDataURL('image/jpeg',0.96);
+    a.click();
     showToast('✅ บันทึก "'+name+'" สำเร็จ!');
-  }catch(e){
-    showToast('❌ เกิดข้อผิดพลาด: '+e.message);
-  }
+  }catch(e){showToast('❌ เกิดข้อผิดพลาด');}
 }
 
 function showToast(msg){
   const t=document.getElementById('toast');
-  t.textContent=msg; t.classList.add('show');
-  clearTimeout(t._timer);
-  t._timer=setTimeout(()=>t.classList.remove('show'),2500);
+  t.textContent=msg;t.classList.add('show');
+  clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2500);
 }
 
-// ---- CHARTS ----
 const baseOpts={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+c.parsed.y.toLocaleString('th-TH')+' บ.'}}}};
 const gridC='rgba(0,0,0,0.05)',tickC='#8892AA';
 
-new Chart(document.getElementById('trendOv'),{type:'line',data:{labels:PER,datasets:[{data:TOT,borderColor:'#1D5FB4',backgroundColor:'rgba(29,95,180,0.07)',fill:true,tension:.35,pointRadius:PER.map((_,i)=>i===7?8:5),pointBackgroundColor:PER.map((_,i)=>i===7?'#B06010':'#1D5FB4'),borderWidth:2.5}]},options:{...baseOpts,scales:{x:{ticks:{color:tickC,font:{size:11}},grid:{display:false}},y:{ticks:{color:tickC,font:{size:10},callback:v=>(v/1e6).toFixed(1)+' ล.'},grid:{color:gridC}}}}});
+// Trend line
+new Chart(document.getElementById('trendOv'),{type:'line',data:{labels:PER,datasets:[{data:TOT,borderColor:'#1D5FB4',backgroundColor:'rgba(29,95,180,0.07)',fill:true,tension:.35,pointRadius:PER.map((_,i)=>i===LAST?8:5),pointBackgroundColor:PER.map((_,i)=>i===LAST?'#1A8C5B':'#1D5FB4'),borderWidth:2.5}]},options:{...baseOpts,scales:{x:{ticks:{color:tickC,font:{size:11}},grid:{display:false}},y:{ticks:{color:tickC,font:{size:10},callback:v=>(v/1e6).toFixed(1)+' ล.'},grid:{color:gridC}}}}});
 
-const pd=D.filter(d=>d.v[7]>0).map((d,i)=>({name:d.name,val:d.v[7],color:PC[i%PC.length]}));
+// Pie
+const pd=D.filter(d=>d.v[LAST]>0).map((d,i)=>({name:d.name,val:d.v[LAST],color:PC[i%PC.length]}));
 const pt=pd.reduce((a,b)=>a+b.val,0);
 new Chart(document.getElementById('pieOv'),{type:'doughnut',data:{labels:pd.map(d=>d.name),datasets:[{data:pd.map(d=>d.val),backgroundColor:pd.map(d=>d.color),borderWidth:2,borderColor:'#fff',hoverOffset:8}]},options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+c.label+': '+c.parsed.toLocaleString('th-TH')+' บ.'}}}}});
 document.getElementById('pieLeg').innerHTML=pd.map(d=>`<span style="display:flex;align-items:center;gap:4px;font-size:10px;color:var(--text2);"><span style="width:9px;height:9px;border-radius:2px;background:${d.color};flex-shrink:0;"></span>${d.name} ${Math.round(d.val/pt*100)}%</span>`).join('');
@@ -475,34 +452,41 @@ D.filter(d=>d.st!=='none').forEach(d=>{
   sc.innerHTML+=`<div style="background:${bg};border-radius:10px;padding:13px 15px;border:1px solid ${bc};">
     <div style="font-size:10px;color:var(--text3);margin-bottom:3px;font-family:var(--mono);">${d.loc}</div>
     <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px;">${d.name}</div>
-    <div style="font-family:var(--mono);font-size:15px;color:var(--blue);margin-bottom:6px;">${fmt(d.v[7])}</div>
+    <div style="font-family:var(--mono);font-size:15px;color:var(--blue);margin-bottom:6px;">${fmt(d.v[LAST])}</div>
     <span class="chip ${SC[d.st]}">${SL[d.st]}</span>
     ${d.diff!==0?`<span style="font-family:var(--mono);font-size:11px;margin-left:6px;" class="${dc}">${fmtd(d.diff)}</span>`:''}
   </div>`;
 });
 
-new Chart(document.getElementById('trendBar'),{type:'bar',data:{labels:PER,datasets:[{data:TOT,backgroundColor:TOT.map((_,i)=>i===7?'#B06010':'rgba(29,95,180,0.45)'),borderRadius:5,borderSkipped:false}]},options:{...baseOpts,scales:{x:{ticks:{color:tickC},grid:{display:false}},y:{ticks:{color:tickC,callback:v=>(v/1e6).toFixed(1)+' ล.'},grid:{color:gridC}}}}});
+// Trend bar
+new Chart(document.getElementById('trendBar'),{type:'bar',data:{labels:PER,datasets:[{data:TOT,backgroundColor:TOT.map((_,i)=>i===LAST?'#1A8C5B':'rgba(29,95,180,0.45)'),borderRadius:5,borderSkipped:false}]},options:{...baseOpts,scales:{x:{ticks:{color:tickC},grid:{display:false}},y:{ticks:{color:tickC,callback:v=>(v/1e6).toFixed(1)+' ล.'},grid:{color:gridC}}}}});
 
-const t5=D.filter(d=>d.v[7]>0).sort((a,b)=>b.v[7]-a.v[7]).slice(0,5);
+// Multi-line top5
+const t5=D.filter(d=>d.v[LAST]>0).sort((a,b)=>b.v[LAST]-a.v[LAST]).slice(0,5);
 const mc=['#1D5FB4','#C0392B','#1A8C5B','#B06010','#6B3FA0'];
 document.getElementById('mlLeg').innerHTML=t5.map((d,i)=>`<div class="li"><div class="lsq" style="background:${mc[i]}"></div>${d.name}</div>`).join('');
 new Chart(document.getElementById('multiLine'),{type:'line',data:{labels:PER,datasets:t5.map((d,i)=>({label:d.name,data:d.v,borderColor:mc[i],backgroundColor:'transparent',tension:.3,pointRadius:4,borderWidth:2}))},options:{...baseOpts,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+c.parsed.y.toLocaleString('th-TH')+' บ.'}}},scales:{x:{ticks:{color:tickC,font:{size:11}},grid:{display:false}},y:{ticks:{color:tickC,font:{size:10},callback:v=>(v/1e6).toFixed(1)+' ล.'},grid:{color:gridC}}}}});
 
-const hd=D.filter(d=>d.v[7]>0).sort((a,b)=>b.v[7]-a.v[7]);
-new Chart(document.getElementById('hbar'),{type:'bar',data:{labels:hd.map(d=>d.name),datasets:[{data:hd.map(d=>d.v[7]),backgroundColor:hd.map(d=>BC[d.st]),borderRadius:4,borderSkipped:false}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+c.parsed.x.toLocaleString('th-TH')+' บาท'}}},scales:{x:{ticks:{color:tickC,callback:v=>v.toLocaleString('th-TH')},grid:{color:gridC}},y:{ticks:{color:'#4A5272',font:{size:11}},grid:{display:false}}}}});
+// H-bar
+const hd=D.filter(d=>d.v[LAST]>0).sort((a,b)=>b.v[LAST]-a.v[LAST]);
+new Chart(document.getElementById('hbar'),{type:'bar',data:{labels:hd.map(d=>d.name),datasets:[{data:hd.map(d=>d.v[LAST]),backgroundColor:hd.map(d=>BC[d.st]),borderRadius:4,borderSkipped:false}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+c.parsed.x.toLocaleString('th-TH')+' บาท'}}},scales:{x:{ticks:{color:tickC,callback:v=>v.toLocaleString('th-TH')},grid:{color:gridC}},y:{ticks:{color:'#4A5272',font:{size:11}},grid:{display:false}}}}});
 
+// Change bars
+const cdArr=D.filter(d=>d.diff!==0).sort((a,b)=>a.diff-b.diff);
+const mx=Math.max(...cdArr.map(d=>Math.abs(d.diff)));
 const cbEl=document.getElementById('changeBars');
-D.filter(d=>d.diff!==0).sort((a,b)=>a.diff-b.diff).forEach(d=>{
-  const mx=223127,p=Math.round(Math.abs(d.diff)/mx*100);
+cdArr.forEach(d=>{
+  const p=Math.round(Math.abs(d.diff)/mx*100);
   cbEl.innerHTML+=`<div class="brow"><span class="bname">${d.name}</span><div class="btrack"><div class="bfill" style="width:${p}%;background:${d.diff>0?'#1A8C5B':'#C0392B'};"></div></div><span class="bamt ${d.diff>0?'pos':'neg'}">${fmtd(d.diff)}</span></div>`;
 });
 
+// Full table
 const tb=document.getElementById('tblBody');
 D.forEach(d=>{
   const dc=d.diff>0?'pos':d.diff<0?'neg':'zero';
-  tb.innerHTML+=`<tr><td style="color:var(--text3);">${d.n}.</td><td style="color:var(--text);font-weight:500;">${d.name}</td><td><span class="chip ${SC[d.st]}">${SL[d.st]}</span></td>${d.v.slice(0,7).map(v=>`<td>${fmt(v)}</td>`).join('')}<td class="new-col">${fmt(d.v[7])}</td><td class="${dc}">${fmtd(d.diff)}</td></tr>`;
+  tb.innerHTML+=`<tr><td style="color:var(--text3);">${d.n}.</td><td style="color:var(--text);font-weight:500;">${d.name}</td><td><span class="chip ${SC[d.st]}">${SL[d.st]}</span></td>${d.v.slice(0,LAST).map(v=>`<td>${fmt(v)}</td>`).join('')}<td class="new-col">${fmt(d.v[LAST])}</td><td class="${dc}">${fmtd(d.diff)}</td></tr>`;
 });
-tb.innerHTML+=`<tr class="trow"><td colspan="3" style="text-align:left;">รวมทั้งหมด</td>${TOT.slice(0,7).map(v=>`<td>${v.toLocaleString('th-TH')}</td>`).join('')}<td class="new-col">${TOT[7].toLocaleString('th-TH')}</td><td class="neg">-233,185</td></tr>`;
+tb.innerHTML+=`<tr class="trow"><td colspan="3" style="text-align:left;">รวมทั้งหมด</td>${TOT.slice(0,LAST).map(v=>`<td>${v.toLocaleString('th-TH')}</td>`).join('')}<td class="new-col">${TOT[LAST].toLocaleString('th-TH')}</td><td class="pos">+168,703</td></tr>`;
 </script>
 </body>
 </html>
